@@ -1,0 +1,102 @@
+@import '../../common/common.wxss';
+
+page, .main {
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.categroy-left {
+  float: left;
+  width: 150rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.categroy-left .cate-list {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+.categroy-left .cate-list.on {
+  color: #ab956d;
+  border-left: 3px solid #ab956d;
+  background-color: #fff;
+}
+
+.categroy-right {
+  float: right;
+  width: 600rpx;
+  min-height: 100%;
+  /* height: 100%; */
+  /* overflow: hidden; */
+  background-color: #fff;
+}
+
+.categroy-banner {
+  padding: 40rpx 40rpx 0 40rpx;
+  box-sizing: border-box;
+}
+
+.cate-box {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cate-banner image {
+  display: block;
+  width: 100%;
+  height: 190rpx;
+}
+
+.cate-title {
+  position: relative;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 30rpx 0 55rpx;
+  text-align: center;
+  color: #ab956d;
+  font-size: 28rpx;
+}
+
+.cate-title::before {
+  position: absolute;
+  left: 130rpx;
+  top: 43rpx;
+  content: '';
+  width: 70rpx;
+  height: 4rpx;
+  background: #ab956d;
+}
+
+.cate-title::after {
+  position: absolute;
+  right: 130rpx;
+  top: 43rpx;
+  content: '';
+  width: 70rpx;
+  height: 4rpx;
+  background: #ab956d;
+}
+
+.product-list {
+  display: inline-block;
+  width: 180rpx;
+  height: 180rpx;
+  text-align: center;
+  margin: 0 20rpx 40rpx 0;
+}
+
+.product-list image {
+  width: 100rpx;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+}
+
+.product-list .classname {
+  font-size: 29rpx;
+}
+
+.product-list:nth-child(3n) {
+  margin-right: 0;
+}

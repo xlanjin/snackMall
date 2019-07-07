@@ -1,0 +1,27 @@
+<template name="categoryInfo">
+  <view class="item-content">
+    <view class="item_info">
+      <image src="/image/common/hot.png" class="product-hot" wx:if="{{item.hot}}"></image>
+      <image src="{{item.imageurl}}" class="product-banner"></image>
+    </view>
+    <view class="item-info-product">
+      <!-- 商家驻场以及商品名称 -->
+      <view class="product-name marginBottom">
+        <text class="product-shop" wx:if="{{item.shop}}">天猫</text> {{item.name}}
+      </view>
+      <!-- 商品类别标签以及净重量 -->
+      <view class="product-category marginBottom">
+        <view class="category-name">曲奇饼干</view>
+        |
+        <view>500g</view>
+      </view>
+      <view class="product-price-wrap marginBottom">
+        <view class="product-price-new">
+          <text class="dolor">￥</text> {{item.newprice}}
+        </view>
+        <view class="product-price-old">￥{{item.oldprice}}</view>
+        <view class="discount" wx:if="{{item.discount}}">{{item.discount}}折</view>
+      </view>
+    </view>
+  </view>
+</template>

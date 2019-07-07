@@ -1,0 +1,154 @@
+@import '../../common/common.wxss';
+@import "/page/templetes/categoryInfo/categoryInfo.wxss"; 
+
+.main {
+  padding: 0 20rpx;
+}
+
+/* 搜索部分 */
+
+.search {
+  margin: 30rpx 0;
+  border: 3rpx solid #d5d6d6;
+  border-radius: 70rpx;
+}
+
+.search_arlet {
+  height: 1.4rem;
+  line-height: 1.4rem;
+  padding-left: 20rpx;
+}
+
+.searchcion {
+  float: left;
+  margin-right: 30rpx;
+  padding-top: 10rpx;
+}
+
+.search_arlet input {
+  font-size: 26rpx;
+}
+
+.closeSearch {
+  width: 30rpx;
+  height: 30rpx;
+  float: right;
+  padding-top: 12rpx;
+  padding-right: 20rpx;
+  z-index: 999999;
+}
+
+.initSearch .title {
+  padding-bottom: 10rpx;
+  color: #ab956d;
+  width: 25%;
+  margin: 30rpx 0 15rpx 0;
+}
+
+.tags text {
+  display: inline-block;
+  font-size: 28rpx;
+  padding: 6rpx 20rpx;
+  border: 2rpx solid #ddd;
+  color: #aaa;
+  margin: 0 30rpx 20rpx 0;
+  border-radius: 40rpx;
+  word-break: break-all;
+}
+
+/* 下拉提示框 */
+
+.keywords {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 90rpx;
+  background: #fff;
+  z-index: 9;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.keywords-item {
+  line-height: 70rpx;
+  border-bottom: 1px solid #eee;
+  color: #787878;
+  font-size: 28rpx;
+}
+
+.keywords-item view{
+  display: inline-block;
+}
+
+.leftPoint {
+  width: 32rpx;
+  height: 32rpx;
+  float: right;
+  padding-top: 18rpx;
+}
+
+/* 商品展示区域 */
+
+.result {
+  margin-top: 40rpx;
+}
+
+.result-box, .recommend-box {
+  padding: 0 20rpx;
+}
+
+.result-list {
+  display: inline-block;
+  width: 325rpx;
+  height: 325rpx;
+  margin: 0 20rpx 20rpx 0;
+  border-radius: 10px;
+  text-align: center;
+  background: #f5f6f5;
+}
+
+.result-list:nth-child(2n) {
+  margin-right: 0;
+}
+
+.result-list image {
+  width: 175rpx;
+  height: 175rpx;
+  margin: 20rpx 0 10rpx;
+}
+
+.result-list .result-text {
+  font-size: 32rpx;
+}
+
+.null-tips {
+  padding: 200rpx 0;
+  text-align: center;
+  color: #787878;
+}
+
+/* 相关推荐 */
+
+.recommend-title {
+  position: relative;
+  height: 0;
+  width: 1005;
+  border-bottom: 1px solid #f0f0f1;
+  margin-bottom: 42rpx;
+}
+
+.recommend-title text {
+  position: absolute;
+  left: 50%;
+  top: -20rpx;
+  width: 150rpx;
+  height: 40rpx;
+  margin-left: -75rpx;
+  line-height: 40rpx;
+  background: #fff;
+  color: #5e5e5e;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}

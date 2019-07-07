@@ -1,0 +1,76 @@
+<import src="/page/templetes/categoryInfo/categoryInfo.wxml" />
+
+<view class="main">
+  <!-- 搜索框部分 -->
+  <view class="search">
+    <view class="search_arlet">
+      <icon class="searchcion" size='15' type='search'></icon>
+      <image src="/image/common/close.png" class="closeSearch" wx:if="{{showKeys}}" bindtap="closeSearch"></image>
+      <input class="text" focus="{{name_focus}}" placeholder="衬衫裙" data-store="{{inputValue}}" value="{{inputValue}}" bindinput='searchInput' bindconfirm="setSearchStorage" />
+
+    </view>
+  </view>
+
+  <!-- 下拉提示框 -->
+  <view class="keywords" wx:if="{{showKeys}}">
+    <view class="keywords-item" wx:for="{{keywordsList}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle" data-id="{{index}}">
+      <view>{{item}}</view>
+      <image src="/image/common/leftTopPoint.png" class="leftPoint"></image>
+    </view>
+  </view>
+
+  <!-- 搜索推荐-展示 -->
+  <view class="initSearch" wx:if="{{searchDetail}}">
+    <view wx:if="{{history.length > 0}}">
+      <view class="title">
+        <text>历史搜索</text>
+      </view>
+      <view class="tags">
+        <text wx:for="{{history}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
+      </view>
+    </view>
+    <view class="title">推荐搜索</view>
+    <view class="tags">
+      <text wx:for="{{hot}}" wx:key="index" data-text="{{item}}" bindtap="keywordHandle">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 商品信息展示区域 -->
+  <scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages" wx:if="{{cateInfo}}">
+    <view class="goods" style="width:100%">
+      <view class="img_item">
+        <!-- 引用模板开始 注意数据值：如果需要在嵌套的模板中传入多个数据，可以将每个数据用逗号隔开。-->
+        <template is='categoryInfo' data='{{item}}' wx:for='{{col1}}' wx:key='id' />
+        <!-- 引用模板结束 -->
+      </view>
+      <view class="img_item">
+        <!-- 引用模板开始 注意数据值：如果需要在嵌套的模板中传入多个数据，可以将每个数据用逗号隔开。-->
+        <template is='categoryInfo' data='{{item}}' wx:for='{{col2}}' wx:key='id' />
+        <!-- 引用模板结束 -->
+      </view>
+    </view>
+    <!-- <view class="result-null" wx:else>
+      <view class="null-tips">Oh~~ 搜索结果为空！</view>
+      <view class="recommend-title">
+        <text>相关推荐</text>
+      </view>
+      <view class="recommend-box">
+        <view class="result-list" wx:for="{{result}}" wx:key="index">
+          <navigator url="{{item.url}}">
+            <image src="{{item.thumb}}"></image>
+            <view class="result-text">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="result-text">
+              <text>￥ {{item.price}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view> -->
+  </scroll-view>
+  <view style="display:none">
+    <image wx:for="{{images}}" wx:key="id" id="{{item.id}}" src="{{item.imageurl}}" bindload="onImageLoad"></image>
+  </view>
+
+</view>

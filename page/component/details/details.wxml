@@ -1,0 +1,43 @@
+<view class="main">
+  <view class="goods-box">
+    <image src="{{itemIdList.imgUrl}}" class="goods-thumb"></image>
+    <navigator open-type="switchTab" url="../cart/cart">
+      <view class="carts-icon {{scaleCart?'on':''}}">
+        <image src="/image/cart2.png"></image>
+        <text class="carts-icon-num" wx:if="{{hasCarts}}">{{totalNum}}</text>
+      </view>
+    </navigator>
+
+    <view class="goods-operation">
+      <text class="goods-operation-minus" bindtap="minusCount">-</text>
+      <text class="goods-operation-num">数量  {{num}}</text>
+      <text class="goods-operation-add" bindtap="addCount">+</text>
+      <text class="goods-to-cart" bindtap="addToCart">加入购物车</text>
+      <image src="/image/cart1.png" class="goods-cart-img" bindtap="addToCart"></image>
+    </view>
+    <view class="goods-title">{{itemIdList.name}}
+      <text class='goods-price'> ￥{{itemIdList.speace}}</text>
+    </view>
+  </view>
+  <view class="goods-tab-box">
+    <view class="goods-tab-nav {{curIndex == index ?'on':''}}" wx:for="{{goodsTable}}" wx:key="index" data-index="{{index}}" bindtap="bindTap">{{item}}</view>
+    <view class="goods-content" wx:if="{{curIndex === 0}}">
+      <image src="{{itemIdList.details}}" mode="widthFix"></image>
+    </view>
+    <view class="goods-content" wx:if="{{curIndex === 1}}">
+      <view class="parameter-name" wx:for="{{itemIdList.parameter}}" wx:for-index="key"  wx:for-item="value" wx:key="ind">
+        <text>{{key}}</text>
+        <text>{{value}}</text>
+      </view>
+    </view>
+    <view class="goods-content" wx:if="{{curIndex === 2}}">
+      <view class="sever-title">退货说明与流程</view>
+      <view class="sever-content commonBottomMgrgin" wx:for="{{itemIdList.service}}" wx:key="index">
+        <view class="sever-nav">{{item.nav}}</view>
+        <view class="sever-lists" wx:for="{{itemIdList.service[index].lists}}" wx:key="index">
+          <view>{{item.listData}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

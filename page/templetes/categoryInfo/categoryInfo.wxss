@@ -1,0 +1,107 @@
+/* pages/details/details.wxss */
+
+page {
+  height: 100%;
+  /* background-color: #f3f4f6; */
+}
+
+.marginBottom {
+  margin-bottom: 10rpx;
+}
+
+.item-content {
+  margin-bottom: 20rpx;
+  background: #f3f4f6;
+  border-radius: 20rpx;
+}
+
+/* 单个图片容器的样式 */
+
+.img_item {
+ width: 47%;
+  margin: 0 8rpx 0rpx;
+  display: inline-block;
+  vertical-align: top;
+  /* background-color: #ffffff; */
+  font-size: 24rpx;
+}
+
+.item_info {
+  text-align: center;
+  position: relative;
+}
+
+.item_info .product-banner {
+  width: 60%;
+  height: 260rpx;
+  margin: 0 auto;
+}
+
+.item_info .product-hot{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 0;
+}
+
+.item-info-product {
+  background: #f3f4f6;
+  padding: 10rpx;
+}
+
+.product-name {
+  color: #000;
+  text-align: left;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-shop {
+  background: red;
+  color: #fff;
+  padding: 3px;
+  font-size: 19rpx;
+  border-radius: 8rpx;
+  line-height: 13rpx;
+  display: inline-block;
+}
+
+.product-category {
+  font-size: 19rpx;
+  color: #6666;
+}
+
+.product-category view {
+  display: inline-block;
+}
+
+.product-price-wrap .product-price-new {
+  color: #e80080;
+  font-size: 29rpx;
+  font-weight: bold;
+}
+
+.product-price-wrap .dolor {
+  font-size: 20rpx;
+}
+
+.product-price-wrap .product-price-old {
+  color: #888;
+  /* 删除线 */
+  text-decoration: line-through;
+  padding-left: 5rpx;
+}
+
+.product-price-wrap .discount {
+  margin-left: 25rpx;
+  background-color: #000;
+  color: #fff;
+  padding-left: 2px;
+  padding-right: 7rpx;
+}
+
+.product-price-wrap view{
+  display: inline-block;
+}

@@ -1,0 +1,34 @@
+page {
+  background-color: #ffff;
+  font-family: "Helvetica Neue",
+                 "Hiragino Sans GB",
+                 "Microsoft YaHei",
+                 "\9ED1\4F53",
+                 Arial,
+                 sans-serif;
+  font-size: 32rpx;
+}
+
+.navigator-hover {
+  background: none;
+}
+
+/* 区域块的底部间隔 */
+.commonBottomMgrgin {
+  margin-bottom: 15rpx;
+}
+
+/* 底部0.5px边线 */
+.commonBottomBorder:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}

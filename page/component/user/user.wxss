@@ -1,0 +1,271 @@
+@import '../../common/common.wxss';
+
+page {
+  background-color: #f5f5f5;
+}
+
+.main {
+  width: 95%;
+  margin-left: 20rpx;
+}
+
+.header {
+  padding: 50rpx 30rpx 30rpx 50rpx;
+  box-sizing: border-box;
+  background: #ab956d;
+  font-size: 28rpx;
+  color: #fff;
+  height: 200rpx;
+  border-radius: 15rpx;
+  margin-top: 25rpx;
+}
+
+.defindImg {
+  width: 80rpx;
+  height: 80rpx;
+  padding-left: 15rpx;
+  padding-top: 13rpx;
+}
+
+.header .thumb {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+
+.imgInfo {
+  width: 110rpx;
+  height: 110rpx;
+  float: left;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.getUser {
+  height: 66rpx;
+  line-height: 65rpx;
+  width: 140rpx;
+  font-size: 29rpx;
+  margin: 10rpx;
+  /* background-color: #dedede; */
+  padding: 0rpx;
+  color: #fff;
+}
+
+.signIn{
+  display: inline-block;
+  float:right;
+  text-align:center;
+  font-size: 25rpx;
+}
+
+.signIn image{
+ width:65rpx;
+  height:65rpx;
+  overflow:hidden;
+  vertical-align:middle;
+  margin-bottom:10rpx;
+}
+
+button, .button-hover {
+  background-color: #ab956d;
+}
+
+.infoContent {
+  display: inline-block;
+  margin-left: 25rpx;
+  padding-top: 20rpx;
+}
+
+.infoContent text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nickname {
+  width: 160rpx;
+}
+
+.header .about {
+  float: right;
+}
+
+.rightIcon {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+}
+
+/* 我的订单--管理 */
+
+.orders-box {
+  background: #fff;
+}
+
+.myOrder {
+  font-size: 35rpx;
+}
+
+.orders {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 40rpx;
+  position: relative;
+}
+
+.orders view {
+  display: inline-block;
+  width: 210rpx;
+}
+
+.allOther {
+  float: right;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.ordeisType {
+  height: 130rpx;
+  line-height: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20rpx 0 25rpx 0;
+  background-color: #fff;
+}
+
+.iconItem {
+  text-align: center;
+}
+
+.ordeisType image {
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+}
+
+.iconTitle {
+  display: block;
+  font-size: 28rpx;
+  line-height: 1.6;
+  color: #666;
+  margin-top: 20rpx;
+}
+
+.itemList {
+  padding: 3rpx;
+}
+
+.orders-list {
+  padding-left: 30rpx;
+  border-bottom: 20rpx solid #ededed;
+}
+
+.orders-list:last-child {
+  border-bottom: 0;
+}
+
+.orders-number {
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+
+.orders-detail {
+  position: relative;
+  height: 120rpx;
+  padding: 35rpx 20rpx 35rpx 170rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+
+.orders-detail image {
+  position: absolute;
+  left: 0;
+  top: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.orders-detail view {
+  line-height: 60rpx;
+}
+
+.orders-detail .orders-status {
+  position: absolute;
+  right: 20rpx;
+  top: 35rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #b42f2d;
+}
+
+.orders-footer {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #2f2f2f;
+  padding: 15rpx 30rpx 15rpx 0;
+}
+
+.orders-footer .orders-btn {
+  float: right;
+  width: 170rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  background: #b42f2d;
+  color: #fff;
+}
+
+/* 收货地址 */
+
+.addressIcon {
+  width: 44rpx;
+  height: 45rpx;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+
+.address-box {
+  color: #999;
+  line-height: 90rpx;
+  font-size: 30rpx;
+}
+
+.address-box .address-manage {
+  position: relative;
+  height: 90rpx;
+  padding-left: 15rpx;
+}
+
+.otherSingles {
+  background-color: #fff;
+}
+
+.address-box .address-manage::after {
+  position: absolute;
+  right: 30rpx;
+  top: 34rpx;
+  content: '';
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #7f7f7f;
+  border-right: 4rpx solid #7f7f7f;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.address-box .address-list {
+  padding-left: 30rpx;
+}
+
+.address-box .address-list view {
+  height: 90rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+
+.address-box .address-list view:last-child {
+  border-bottom: 0;
+}

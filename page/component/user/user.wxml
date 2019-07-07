@@ -1,0 +1,74 @@
+<view class="main">
+  <!-- 个人信息 -->
+  <view class="header commonBottomMgrgin" wx:if="{{!hasUserInfo && canIUse}}">
+    <view class="imgInfo">
+      <image src="/image/42.png" class="defindImg"></image>
+    </view>
+    <view class="infoContent">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="getUser">立即登录</button>
+    </view>
+  </view>
+  <view class="header commonBottomMgrgin" wx:else>
+    <view class="imgInfo">
+      <image src="{{userInfo.avatarUrl}}" class="thumb"></image>
+    </view>
+    <view class="infoContent">
+      <text class="nickname commonBottomMgrgin">{{userInfo.nickName}}</text>
+      <text class="descInfo">尽自己所能…………</text>
+    </view>
+    <view class="signIn">
+      <image src="/image/user/signIn.png"></image>
+      <view class="sign">打卡签到</view>
+    </view>
+  </view>
+
+  <!-- 订单管理 -->
+  <view class="orders-box commonBottomMgrgin">
+    <view class="orders commonBottomBorder">
+      <view class="myOrder">我的订单</view>
+      <view class="allOther">
+        查看全部订单
+        <image class="rightIcon" src="/image/right.png"></image>
+      </view>
+    </view>
+    <view class="ordeisType">
+      <view class="iconItem" data-title='{{item.route}}' wx:for="{{iconList}}" bindtap="onIcon" data-index='{{index}}' wx:key="index">
+        <image src='{{item.imgUrl}}'></image>
+        <view class="iconTitle">{{item.title}}</view>
+      </view>
+    </view>
+
+
+
+    <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+      <view class="orders-number">订单编号：{{item.number}}</view>
+      <view class="orders-detail">
+        <image src="{{item.thumb}}"></image>
+        <view class="">{{item.name}}</view>
+        <view class="">{{item.count}}</view>
+        <text class="orders-status">{{item.status}}</text>
+      </view>
+      <view class="orders-footer">
+        <text>实付：￥{{item.money}}</text>
+        <button size="mini" class="orders-btn" bindtap="payOrders">付款</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 其他管理模块 -->
+  <view class="ordeisType commonBottomMgrgin">
+    <view class="iconItem" data-title='{{item.route}}' wx:for="{{secondList}}" bindtap="onIcon" data-index='{{index}}' wx:key="index">
+      <image src='{{item.imgUrl}}'></image>
+      <view class="iconTitle">{{item.title}}</view>
+    </view>
+  </view>
+
+  <!-- 地址管理 -->
+  <view class="address-box">
+    <view class="address-manage otherSingles commonBottomMgrgin" bindtap="otherSingle" wx:for="{{otherSingleList}}" wx:key="index">
+      <navigator url="/page/component/address/address"></navigator>
+      <image src='{{item.imgUrl}}' class="addressIcon"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>

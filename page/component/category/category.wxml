@@ -1,0 +1,31 @@
+<view class="main">
+  <view class="categroy-left">
+    <view wx:for="{{cateItems}}" wx:key="index" data-id="{{item.cate_id}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{curIndex === index?'on':''}}">{{item.cate_name}}</view>
+  </view>
+
+  <scroll-view class="categroy-right" scroll-y="{{isScroll}}" scroll-into-view="{{toView}}" scroll-with-animation="true">
+    <!-- wx:for="{{detail}}" wx:key="index" -->
+    <view class="categroy-banner">
+      <view class="cate-banner">
+        <image src="{{cateItems[curIndex].cate_banner}}"></image>
+      </view>
+      <view class="cate-title">
+        <text>{{cateItems[curIndex].cate_name}}</text>
+      </view>
+    </view>
+    <view wx:if="{{cateItems[curIndex].ishaveChild}}">
+      <view id="{{item.id}}" class="cate-box">
+          <block wx:for="{{cateItems[curIndex].children}}" wx:key="index">
+            <view class="product-list">
+            <!-- 点击跳转到详情页- list.wxml -->
+            <image src="{{item.image}}"></image>
+              <view class="classname">
+                <text>{{item.name}}</text>
+              </view>
+          </view>
+          </block>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>
